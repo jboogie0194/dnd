@@ -14,9 +14,37 @@ export default function Dashboard(): React.ReactElement {
   return (
     <div className="py-10">
       <header>
+        <ul>
+          <div className="flex flex-col w-full max-w-[650px] mx-auto text-left">
+            <li><strong> D&D BEYOND COMPANION </strong></li> <nav aria-label="breadcrumb">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Services</a></li>
+    <li>Design</li>
+  </ul>
+</nav>
+          </div>    
+        </ul>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold leading-tight text-gray-900">
             Welcome back, {user?.firstName}!
+            <nav>
+               <ul>
+                <li>
+                  <details className="flex flex-row text-right dropdown">
+                    <summary>
+                      Account
+                    </summary>
+                    <ul dir="rtl">
+                      <li><a href="#">logout</a></li>
+                      <li><a href="#">security</a></li>
+                      <li><a href="#">settings</a></li>
+                      <li><a href="#">profile</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </nav>
           </h1>
         </div>
       </header>
@@ -122,14 +150,21 @@ export default function Dashboard(): React.ReactElement {
             <div className="mt-8">
               <div className="bg-white shadow overflow-hidden sm:rounded-lg">
                 <div className="px-4 py-5 sm:px-6">
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Recent Activity
+                  <h3 className="text-lg leading-6 font-medium text-red-900">
+                    Campaigns!
                   </h3>
+                  <button>+</button>
                 </div>
                 <div className="border-t border-gray-200">
                   <ul className="divide-y divide-gray-200">
                     <li className="px-4 py-4 sm:px-6">
                       <div className="flex items-center justify-between">
+                        <details name="example" open>
+                          <summary>campaign 1</summary>
+                          <p>...</p>
+                        </details>
+
+                         <hr />
                         <p className="text-sm font-medium text-gray-900">
                           Updated profile information
                         </p>
@@ -138,6 +173,13 @@ export default function Dashboard(): React.ReactElement {
                     </li>
                     <li className="px-4 py-4 sm:px-6">
                       <div className="flex items-center justify-between">
+                         <details name="example">
+                          <summary>campaign 2</summary>
+                          <ul>
+                            <li>...</li>
+                            <li>...</li>
+                          </ul>
+                        </details>
                         <p className="text-sm font-medium text-gray-900">
                           Completed onboarding
                         </p>
@@ -146,6 +188,13 @@ export default function Dashboard(): React.ReactElement {
                     </li>
                     <li className="px-4 py-4 sm:px-6">
                       <div className="flex items-center justify-between">
+                        <details name="example">
+                          <summary>campaign 2</summary>
+                          <ul>
+                            <li>...</li>
+                            <li>...</li>
+                          </ul>
+                        </details>
                         <p className="text-sm font-medium text-gray-900">
                           Account created
                         </p>
@@ -156,6 +205,15 @@ export default function Dashboard(): React.ReactElement {
                 </div>
               </div>
             </div>
+            <aside>
+              <nav>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Products</a></li>
+                </ul>
+              </nav>
+            </aside>
           </div>
         </div>
       </main>

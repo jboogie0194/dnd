@@ -55,10 +55,10 @@ export default function Login(): React.ReactElement {
             <main className="flex">
                 <article className='mx-auto max-w-[600px]'>
                     <form className='flex flex-col w-full max-w-[650px] mx-auto text-left' onSubmit={handleSubmit}>
-                        <label htmlFor="fname">First name:</label>
-                        <input type="text" id="fname" name="fname" value="John" />
-                        <label htmlFor="lname">Last name:</label>
-                        <input type="text" id="lname" name="lname" value="Doe" />
+                        <label htmlFor="email">email:</label>
+                        <input type="text" id="email" name="email" />
+                        <label htmlFor="password">password:</label>
+                        <input type="password" id="password" name="password" />
                         <input type="submit" value="Submit" />
                     </form>
                 </article>

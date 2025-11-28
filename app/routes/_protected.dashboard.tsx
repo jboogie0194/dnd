@@ -12,24 +12,27 @@ export default function Dashboard(): React.ReactElement {
   const { user } = useAuth();
 
   return (
-    <div className="py-10">
-      <header>
-        <ul>
-          <div className="flex flex-col w-full max-w-[650px] mx-auto text-left">
-            <li><strong> D&D BEYOND COMPANION </strong></li> <nav aria-label="breadcrumb">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Services</a></li>
-    <li>Design</li>
-  </ul>
-</nav>
-          </div>    
-        </ul>
+    <div>
+      <header className="bg-red-900 fixed top-0 left-0 right-0 z-50">
+       <nav className='flex align-middle'>
+          <a href="#" className="my-auto mx-5 text-white!">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </a>
+          <h2 className="my-auto! block h-auto">D&D BEYOND COMPANION</h2>
+          <a href="#profle" className='rounded-full overflow-hidden h-15 w-15 m-3'>
+            <img src="https://picsum.photos/200/300" />
+          </a>
+        </nav>
+      </header>
+
+      <main>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold leading-tight text-gray-900">
             Welcome back, {user?.firstName}!
             <nav>
-               <ul>
+              <ul>
                 <li>
                   <details className="flex flex-row text-right dropdown">
                     <summary>
@@ -47,8 +50,6 @@ export default function Dashboard(): React.ReactElement {
             </nav>
           </h1>
         </div>
-      </header>
-      <main>
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="px-4 py-8 sm:px-0">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -164,7 +165,7 @@ export default function Dashboard(): React.ReactElement {
                           <p>...</p>
                         </details>
 
-                         <hr />
+                        <hr />
                         <p className="text-sm font-medium text-gray-900">
                           Updated profile information
                         </p>
@@ -173,7 +174,7 @@ export default function Dashboard(): React.ReactElement {
                     </li>
                     <li className="px-4 py-4 sm:px-6">
                       <div className="flex items-center justify-between">
-                         <details name="example">
+                        <details name="example">
                           <summary>campaign 2</summary>
                           <ul>
                             <li>...</li>

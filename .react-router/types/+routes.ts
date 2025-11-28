@@ -17,6 +17,12 @@ type Pages = {
   "/dashboard": {
     params: {};
   };
+  "/campaign": {
+    params: {};
+  };
+  "/profile": {
+    params: {};
+  };
   "/login": {
     params: {};
   };
@@ -25,11 +31,19 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/dashboard" | "/login";
+    page: "/" | "/dashboard" | "/campaign" | "/profile" | "/login";
   };
   "routes/_protected.dashboard.tsx": {
     id: "routes/_protected.dashboard";
     page: "/dashboard";
+  };
+  "routes/_protected.campaign.tsx": {
+    id: "routes/_protected.campaign";
+    page: "/campaign";
+  };
+  "routes/_protected.profile.tsx": {
+    id: "routes/_protected.profile";
+    page: "/profile";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -44,6 +58,8 @@ type RouteFiles = {
 type RouteModules = {
   "root": typeof import("./app/root.tsx");
   "routes/_protected.dashboard": typeof import("./app/routes/_protected.dashboard.tsx");
+  "routes/_protected.campaign": typeof import("./app/routes/_protected.campaign.tsx");
+  "routes/_protected.profile": typeof import("./app/routes/_protected.profile.tsx");
   "routes/_index": typeof import("./app/routes/_index.tsx");
   "routes/login": typeof import("./app/routes/login.tsx");
 };

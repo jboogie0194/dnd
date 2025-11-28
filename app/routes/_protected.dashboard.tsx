@@ -1,3 +1,4 @@
+import NavigationBar from '../components/NavigationBar';
 import { useAuth } from '../context/AuthContext';
 import type { Route } from './+types/_protected.dashboard';
 
@@ -13,19 +14,7 @@ export default function Dashboard(): React.ReactElement {
 
   return (
     <div>
-      <header className="bg-red-900 fixed top-0 left-0 right-0 z-50">
-       <nav className='flex align-middle'>
-          <a href="#" className="my-auto mx-5 text-white!">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </a>
-          <h2 className="my-auto! block h-auto">D&D BEYOND COMPANION</h2>
-          <a href="#profle" className='rounded-full overflow-hidden h-15 w-15 m-3'>
-            <img src="https://picsum.photos/200/300" />
-          </a>
-        </nav>
-      </header>
+      <NavigationBar />
 
       <main>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
